@@ -1,0 +1,22 @@
+{
+  "events": [
+    {
+      "title": "Coding Bootcamp 2024",
+      "date": "2024-06-15",
+      "image": "../../client/content/event2.png",
+      "description": "Join us for a comprehensive coding bootcamp where you'll learn the latest technologies and programming languages."
+    },
+    {
+      "title": "Hackathon for IT Enthusiasts",
+      "date": "2024-08-20",
+      "image": "../../client/content/event2.png",
+      "description": "Get ready to unleash your coding skills at our annual hackathon event. Bring your innovative ideas and collaborate with fellow IT enthusiasts."
+    },
+    {
+      "title": "Web Development Workshop",
+      "date": "2024-09-05",
+      "image": "../../client/content/event3.png",
+      "description": "Learn the fundamentals of web development in this hands-on workshop. Build your first website and dive into HTML, CSS, and JavaScript."
+    }
+  ]
+}

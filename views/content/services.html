@@ -1,0 +1,179 @@
+<!-- services.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Your Name">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services - Harmony Hub</title>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="../../Assignment_2/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Assignment_2/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../Assignment_2/css/style.css">
+
+    <!-- Additional Styles for the Services -->
+    <style>
+        #services {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set to full viewport height */
+        }
+
+        .service-card {
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+
+        .service-icon {
+            font-size: 4em;
+            color: #3498db;
+        }
+
+        .service-details {
+            display: none;
+        }
+
+        .service-card.active .service-details {
+            display: block;
+        }
+
+        .toggle-details-btn {
+            cursor: pointer;
+            color: #3498db;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../Assignment_2/index.html"><i class="fa-solid fa-people-group"></i> Harmony Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html"><i class="fa-solid fa-project-diagram"></i> Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html"><i class="fa-solid fa-map-signs"></i> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html"><i class="fa-solid fa-info"></i> Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html"><i class="fa-solid fa-envelope"></i> Blog</a>
+                    </li>
+                    <!-- Additional pages in a line -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy-policy.html"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms-of-service.html"><i class="fa-solid fa-file-alt"></i> Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="events.html"><i class="fa-solid fa-calendar"></i> Events</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="gallery.html"><i class="fa-solid fa-brands fa-envira"></i> Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Services Section -->
+    <section id="services" class="my-5">
+        <div class="row">
+
+
+            <div class="col-md-4">
+                <div class="card service-card" onclick="toggleServiceDetails(this)">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-laptop-code service-icon"></i>
+                        <h5 class="card-title">Web Development</h5>
+                        <p class="card-text service-details">Crafting responsive and dynamic websites to meet your business needs. Our expert team ensures top-notch web development using the latest technologies.
+                            <span class="service-details toggle-details-btn" onclick="toggleDetails(this)">Toggle Details</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="col-md-4">
+                <div class="card service-card" onclick="toggleServiceDetails(this)">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-chalkboard-teacher service-icon"></i>
+                        <h5 class="card-title">Training & Workshops</h5>
+                        <p class="card-text service-details">Providing specialized training and workshops to enhance your team's skills. From coding bootcamps to leadership programs, we cover a wide range of topics.
+                            <span class="service-details toggle-details-btn" onclick="toggleDetails(this)">Toggle Details</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="col-md-4">
+                <div class="card service-card" onclick="toggleServiceDetails(this)">
+                    <div class="card-body text-center">
+                        <i class="fa-solid fa-users service-icon"></i>
+                        <h5 class="card-title">Consulting Services</h5>
+                        <p class="card-text service-details">Guiding businesses through strategic decisions. Our consulting services cover areas such as technology adoption, process improvement, and organizational growth.
+                            <span class="service-details toggle-details-btn" onclick="toggleDetails(this)">Toggle Details</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+<script src="../../Assignment_2/scripts/app.js"></script>
+<script src="../../Assignment_2/scripts/event-planning.ts"></script>
+<script src="../../Assignment_2/scripts/login.ts"></script>
+<script src="../../Assignment_2/scripts/register.ts"></script>
+<script src="../../Assignment_2/scripts/router.ts"></script>
+<script src="../../Assignment_2/scripts/statistics.ts"></script><script>
+    function toggleServiceDetails(card) {
+        // Toggle the 'active' class to highlight the clicked service
+        $(card).toggleClass('active');
+
+        // Toggle the display of service details
+        $(card).find('.service-details').toggle();
+    }
+
+    function toggleDetails(btn) {
+        // Toggle the display of the service details
+        $(btn).closest('.service-details').toggle();
+    }
+</script>
+</body>
+</html>

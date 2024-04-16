@@ -1,0 +1,177 @@
+<!-- news.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Harsh Panchal">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News - Harmony-Hub</title>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="../../Assignment_2/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Assignment_2/node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../Assignment_2/css/style.css">
+
+    <!-- Additional Styles for the News -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set the background color for the body */
+        }
+
+        header {
+            background-color: #343a40; /* Set the background color for the header */
+        }
+
+        #news {
+            background-color: #ffffff; /* Set the background color for the news section */
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a medium-dark shadow */
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .news-article {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a medium-dark shadow */
+            background-color: #ffffff; /* Set the background color for the news articles */
+        }
+
+        .news-article h3 {
+            color: #007bff; /* Set the color for the heading */
+        }
+
+        .news-article p {
+            color: #495057; /* Set the color for the paragraph text */
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Set the background color for primary buttons */
+            border-color: #007bff; /* Set the border color for primary buttons */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Set the hover background color for primary buttons */
+            border-color: #0056b3; /* Set the hover border color for primary buttons */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../Assignment_2/index.html"><i class="fa-solid fa-people-group"></i> Harmony-Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html"><i class="fa-solid fa-project-diagram"></i> Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html"><i class="fa-solid fa-map-signs"></i> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html"><i class="fa-solid fa-info"></i> Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html"><i class="fa-solid fa-envelope"></i> Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" href="news.html"><i class="fa-solid fa-newspaper"></i> News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html"><i class="fa-solid fa-briefcase"></i> Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="privacy-policy.html"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="terms-of-service.html"><i class="fa-solid fa-file-alt"></i> Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="events.html"><i class="fa-solid fa-calendar"></i> Events</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="gallery.html"><i class="fa-solid fa-brands fa-envira"></i> Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- News Section -->
+    <section id="news" class="my-5">
+        <!-- News Articles will be dynamically added here using JavaScript -->
+    </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="../../Assignment_2/scripts/app.js"></script>
+<script src="../../Assignment_2/scripts/event-planning.js"></script>
+<script src="../../Assignment_2/scripts/login.js"></script>
+<script src="../../Assignment_2/scripts/register.js"></script>
+<script src="../../Assignment_2/scripts/route.js"></script>
+<script src="../../Assignment_2/scripts/statistics.js"></script>
+<!-- Script for News Articles -->
+<script>
+    $(document).ready(function () {
+        var newsArticles = [
+            { title: 'Breaking News: Harmony-Hub Launches New Website', summary: 'Harmony-Hub is excited to announce the launch of our redesigned website. Explore the new features and improved user experience today!', link: '#' },
+            { title: 'Tech Innovation Summit 2024 Recap', summary: 'Get a glimpse into the latest technological advancements showcased at the Tech Innovation Summit 2024. Discover the groundbreaking solutions that are shaping the future.', link: '#' },
+            { title: 'Harmony-Hub Recognized for Environmental Sustainability', summary: 'We are proud to be recognized for our commitment to environmental sustainability. Learn more about our initiatives and the positive impact we are making.', link: '#' },
+
+        ];
+
+        var newsContainer = $('#news');
+
+        // Function to create a news article
+        function createNewsArticle(article) {
+            var articleHtml = `
+                <div class="news-article">
+                    <h3>${article.title}</h3>
+                    <p>${article.summary}</p>
+                    <div class="read-more">
+                        <a href="${article.link}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            `;
+            return articleHtml;
+        }
+
+        // Function to display news articles
+        function displayNewsArticles() {
+            for (var i = 0; i < newsArticles.length; i++) {
+                var article = createNewsArticle(newsArticles[i]);
+                newsContainer.append(article);
+            }
+        }
+
+        // Initial display of news articles
+        displayNewsArticles();
+    });
+</script>
+</body>
+</html>

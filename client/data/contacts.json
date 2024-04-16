@@ -1,0 +1,10 @@
+{
+  "myContacta":
+          [
+            {
+              "DisplayName": "Peter Parker",
+              "ContactNumber":"416-555-5555",
+              "EmailAddress": "peterparker@domain.com"
+            }
+          ]
+}

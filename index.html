@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Aditya Patel, Harsh Panchal, Veda Patel">
+    <meta name="description" content="Assignment_02">
+    <title>Home - Harmony-Hub</title>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="client/css/style.css"> <!-- Your custom CSS file -->
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html"><i class="fa-solid fa-people-group"></i> Harmony-Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/portfolio.html"><i class="fa-solid fa-project-diagram"></i> Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/services.html"><i class="fa-solid fa-map-signs"></i> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/team.html"><i class="fa-solid fa-info"></i> Team</a>
+                    </li>
+
+                    <!-- Additional pages in a line -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/news.html"><i class="fa-solid fa-newspaper"></i> News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/careers.html"><i class="fa-solid fa-briefcase"></i> Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/privacy-policy.html"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/terms-of-service.html"><i class="fa-solid fa-file-alt"></i> Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="views/content/contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="views/content/events.html"><i class="fa-solid fa-calendar"></i> Events</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="views/content/login.html"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="views/content/gallery.html"><i class="fa-solid fa-brands fa-envira"></i> Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<h1>Visitor Statistics</h1>
+<div id="chartContainer" class="graph-box">
+    <canvas id="myChart" width="400" height="400"></canvas>
+</div>
+
+<footer>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="#">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Add your footer links here -->
+                    <!-- Example link -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('privacy-policy.html')"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</footer>
+
+<!-- JavaScript Section -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="config/app.js"></script>
+<script src="scripts/route.js"></script>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    // Sample data for the chart
+    var data = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+            label: 'Visitors',
+            data: [500, 1000, 750, 1200, 800, 1500],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    // Configuration options for the chart
+    var options = {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    // Get the canvas element
+    var ctx = document.getElementById('myChart').getContext('2d');
+
+    // Create the chart
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: data,
+        options: options
+    });
+</script>
+
+</body>
+</html>

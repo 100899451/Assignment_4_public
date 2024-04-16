@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Harsh Panchal">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog - Harmony-Hub</title>
+
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../client/css/style.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set the background color for the body */
+        }
+
+        header {
+            background-color: #343a40; /* Set the background color for the header */
+        }
+
+        .blog-article {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a medium-dark shadow */
+            background-color: #ffffff; /* Set the background color for the blog articles */
+        }
+
+        .blog-article h3 {
+            color: #007bff; /* Set the color for the heading */
+        }
+
+        .blog-article p {
+            color: #495057; /* Set the color for the paragraph text */
+        }
+
+        .read-more {
+            text-align: right;
+        }
+
+        .btn-primary {
+            background-color: #007bff; /* Set the background color for primary buttons */
+            border-color: #007bff; /* Set the border color for primary buttons */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3; /* Set the hover background color for primary buttons */
+            border-color: #0056b3; /* Set the hover border color for primary buttons */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><i class="fa-solid fa-people-group"></i> Harmony-Hub</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('home.html')"><i class="fa-solid fa-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('portfolio.html')"><i class="fa-solid fa-project-diagram"></i> Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('services.html')"><i class="fa-solid fa-map-signs"></i> Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('team.html')"><i class="fa-solid fa-info"></i> Team</a>
+                    </li>
+
+                    <!-- Additional pages in a line -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('news.html')"><i class="fa-solid fa-newspaper"></i> News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('careers.html')"><i class="fa-solid fa-briefcase"></i> Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('privacy-policy.html')"><i class="fa-solid fa-shield"></i> Privacy Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('terms-of-service.html')"><i class="fa-solid fa-file-alt"></i> Terms of Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="loadContent('contact.html')"><i class="fa-solid fa-phone"></i> Contact</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" onclick="loadContent('events.html')"><i class="fa-solid fa-calendar"></i> Events</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" onclick="loadContent('login.html')"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" onclick="loadContent('gallery.html')"><i class="fa-solid fa-brands fa-envira"></i> Gallery</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <!-- Blog Section -->
+    <section id="blog" class="my-5">
+        <!-- Blog Articles will be dynamically added here using JavaScript -->
+    </section>
+</div>
+
+<script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../config/app.js"></script>
+<script src="../../client/scripts/event-planning.js"></script>
+<script src="../../client/scripts/login.js"></script>
+<script src="../../client/scripts/register.js"></script>
+<script src="../../client/scripts/route.js"></script>
+<script src="../../client/scripts/statistics.js"></script>
+
+<script>
+    // Function to load content via AJAX
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(html => {
+                $('#blog').html(html); // Updated to load content into the #blog section
+            })
+            .catch(error => console.error('Error fetching content:', error));
+    }
+
+    // Function to create a blog article
+    function createBlogArticle(article) {
+        var articleHtml = `
+            <div class="blog-article">
+                <h3>${article.title}</h3>
+                <p>${article.summary}</p>
+                <div class="read-more">
+                    <a href="${article.link}" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+        `;
+        return articleHtml;
+    }
+
+    // Function to display blog articles
+    function displayBlogArticles() {
+        var blogArticles = [
+            { title: 'The Art of Code Refactoring', summary: 'This article delves into the crucial practice of code refactoring, exploring techniques and best practices to enhance code quality, maintainability, and efficiency. Discover how to transform complex code into a cleaner and more readable form while avoiding common pitfalls.', link: 'https://levelup.gitconnected.com/the-art-of-code-refactoring-strategies-and-tips-1606066669cf' },
+            { title: 'Agile Development: Breaking Down the Basics', summary: ' Uncover the fundamental principles of Agile development methodologies in this comprehensive guide. Learn how Agile practices empower teams to adapt to changing requirements, foster collaboration, and deliver high-quality software iteratively. Gain insights into Scrum, Kanban, and other Agile frameworks.', link: 'https://monday.com/lp/agile/?cq_src=google_ads&cq_cmp=16877427760&cq_term=agile&cq_plac=&cq_net=g&cq_plt=gp&utm_medium=cpc&utm_source=adwordssearch&utm_campaign=ca-en-prm-workos-dev-agile-h-search-desktop-exp-aw&utm_keyword=agile&utm_match_type=p&cluster=tech&subcluster=swd_agile&ati=&utm_adgroup=agile&utm_banner=592716905273&gad_source=1&gclid=CjwKCAiA8NKtBhBtEiwAq5aX2Lm5TAp7pimqGBM86LHBh1DNNn-ucbksrut-obJqHdUlCYqvK1EOtxoCTbUQAvD_BwE' },
+            { title: 'Exploring the World of DevOps: A Comprehensive Guide', summary: 'Navigate the expansive landscape of DevOps and understand how it revolutionizes software development and IT operations. This article provides an in-depth exploration of DevOps principles, tools, and cultural aspects. Discover how the integration of development and operations streamlines workflows, enhances collaboration, and accelerates software delivery.', link: 'https://www.sentinelone.com/cybersecurity-101/what-is-devops-a-comprehensive-guide-for-the-modern-enterprise/' },
+            // Add more articles as needed
+        ];
+
+        var blogContainer = $('#blog');
+
+        for (var i = 0; i < blogArticles.length; i++) {
+            var article = createBlogArticle(blogArticles[i]);
+            blogContainer.append(article);
+        }
+    }
+
+    // Initial display of blog articles
+    displayBlogArticles();
+</script>
+</body>
+</html>
